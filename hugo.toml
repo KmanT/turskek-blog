@@ -1,0 +1,397 @@
+baseURL = "https://hugo-profile.netlify.app"
+languageCode = "en-us"
+title = "Kyle Turske Portfolio & Blog"
+# theme = "hugo-profile"
+Paginate = 3
+enableRobotsTXT = true
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+page = [ "HTML", "RSS" ]
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[[Menus.main]]
+identifier = "blog"
+name = "Blog"
+title = "Blog posts"
+url = "/blogs"
+weight = 1
+
+[[Menus.main]]
+identifier = "gallery"
+name = "Gallery"
+title = "Blog posts"
+url = "/gallery"
+weight = 2
+
+[params]
+title = "Kyle Turske's Portfolio & Blog"
+description = "Text about my cool site"
+favicon = "/fav.png"
+useBootstrapCDN = false
+mathjax = false
+animate = true
+
+  [params.font]
+  fontSize = "1rem"
+  fontWeight = 400
+  lineHeight = 1.5
+  textAlign = "left"
+
+  [params.navbar]
+  align = "ms-auto"
+  brandName = "Kyle Turske's Portfolio & Blog"
+  disableSearch = false
+
+    [params.navbar.stickyNavBar]
+    enable = true
+    showOnScrollUp = true
+
+    [params.navbar.menus]
+    disableAbout = false
+    disableExperience = false
+    disableEducation = false
+    disableProjects = false
+    disableAchievements = false
+    disableContact = false
+
+  [params.hero]
+  enable = true
+  intro = "Hi, my name is"
+  title = "Kyle Turske"
+  subtitle = "Software Engineer"
+  content = """
+Always looking for new innovative routes for solving problems.
+  """
+  image = "/images/profile.png"
+
+    [params.hero.bottomImage]
+    enable = false
+
+    [params.hero.button]
+    enable = true
+    name = "Resume"
+    url = "#"
+    download = true
+    newPage = false
+
+[[params.hero.socialLinks.fontAwesomeIcons]]
+icon = "fab fa-github"
+url = "https://github.com/KmanT"
+
+[[params.hero.socialLinks.fontAwesomeIcons]]
+icon = "fab fa-x-linkedin"
+url = "https://linkedin.com/in/turskek/"
+
+  [params.about]
+  enable = true
+  title = "About Me"
+  image = "/images/self_portrait.png"
+  content = """
+Dynamic software developer with a dedicated focus on continuous growth and 
+development, poised to transition into a senior-level position. 
+Prioritizes accountability and persistence in tackling complex projects, 
+consistently striving for excellence. A passionate advocate for collaboration, 
+emphasizing cohesive team building. Fearless in seeking answers, 
+fostering a culture of knowledge-sharing. Proficient in Node.js 
+and enthusiastic about expanding expertise across diverse technologies, 
+programming languages, and industries.
+  """
+   
+
+    [params.about.skills]
+    enable = true
+    content = "This is a list of skills / knowledge areas I have gained during my time as a software developer:"
+    title = "Skillset"
+
+        [params.about.skills.knowledge]
+        enable = true
+        title = "Knowledge Areas"
+        items = [ 
+            "Software Development", 
+            "APIs", 
+            "Agile Development",
+            "Backend Development",
+            "Frontend Development",
+            "Cross-Discipline Teamwork",
+            "Performance Tracking",
+            "Code Review",
+            "Authentication",
+            "Object Oriented Programming",
+            "Test-Driven Development",
+            "Unit Testing",
+            "Cloud Computing",
+            "Microservices",
+            "Containerization",
+            "Debugging"
+        ]
+
+        [params.about.skills.programming_languages]
+        enable = true
+        title = "Programming Languages"
+        items = [ 
+            "JavaScript", 
+            "Perl", 
+            "Java", 
+            "Go", 
+            "Python", 
+            "C#", 
+            "Bash", 
+            "AWK", 
+            "TypeScript",
+            "SQL",
+            "HTML",
+            "CSS",
+        ]
+
+        [params.about.skills.frameworks]
+        enable = true
+        title = "Frameworks"
+        items = [ 
+            "Vue", 
+            "React", 
+            "Angular", 
+            "Express", 
+            "Nest.js", 
+            "Svelte", 
+            "Springboot", 
+            ".Net Core",
+        ]
+
+        [params.about.skills.databases]
+        enable = true
+        title = "Databases / Storage"
+        items = [ 
+            "MySQL", 
+            "Postgres", 
+            "Firebase", 
+            "Redis",
+            "OLAP",
+            "OLTP",
+        ]
+
+        [params.about.skills.tools]
+        enable = true
+        title = "Development Tools"
+        items = [ 
+            "Docker",
+            "Linux",
+            "AWS", 
+            "Azure", 
+            "NewRelic",
+            "Grafana / Loki",
+            "Git",
+            "GitHub",
+            "Postman",
+        ]
+
+  [params.experience]
+  enable = true
+
+    [[params.experience.items]]
+    job = "Software Delivery Developer"
+    compId = "merkle"
+    company = "Merkle, Inc."
+    companyUrl = "https://www.merkle.com"
+    date = "Jan 2021 - present"
+    content = """
+I am currently working as a backend engineer for Merkle, Inc. The sites that I build are sweepstakes 
+and loyalty websites for high profile clients. I mostly use Node.js, Vue, and Perl 
+for site development. When I was hired, I had no experience using Perl, but I was able to quickly 
+pick up the language in order to build a sweepsite within my first two months on the job. At this 
+point I have worked on +25 promotional websites with verying sizes of registrants, with the largest being
+Starbucks For Life 2023.
+    """
+
+      [params.experience.items.featuredLink]
+      enable = false
+      name = "View the project"
+      url = "https://example.com"
+
+    [[params.experience.items]]
+    job = "Associate Software Engineer (2020) / Internship (2019)"
+    compId = "pmc"
+    company = "pmc America, Inc."
+    companyUrl = "https://example.com"
+    date = "May 2019 - Aug 2019  Jan 2020 - Dec 2020"
+    content = """
+This is where I had my internship as a software engineer. I was working on revamping the company's Delivery Cockpit
+product for cloud deployment. I was hired on as a full time Associate Software Engineer after I completed 
+my final semester at GVSU. As an associate my job was to get started on developing a system to process shipping
+documents
+"""
+
+      [params.experience.items.featuredLink]
+      enable = false
+      url = "https://example.com"
+
+      [params.experience.items.info]
+      enable = true
+      content = "I worked as a software developer for more than one year in Amazon."
+
+
+  [params.education]
+  enable = true
+  index = false
+
+    [[params.education.items]]
+    title = "Bachelor of Science in Information Systems | Business Minor"
+    date = "2016 - 2019"
+    GPA = "3.4"
+
+      [params.education.items.school]
+      name = "Grand Valley State University - Allendale, MI"
+      url = "https://www.gvsu.edu/"
+
+      [params.education.items.featuredLink]
+      enable = false
+      url = "https://example.com"
+
+    [[params.education.items]]
+    title = "General Credits"
+    date = "2014 - 2016"
+    GPA = "3.4"
+
+      [params.education.items.school]
+      name = "Oakland Community College - Farmington Hills, MI"
+      url = "https://www.oaklandcc.edu/"
+
+      [params.education.items.featuredLink]
+      enable = false
+      url = "https://example.com"
+
+    [[params.education.items]]
+    title = "High School"
+    GPA = "4.2 out of 5.0"
+
+      [params.education.items.school]
+      name = "Harrison High School - Farmington Hills, MI"
+      url = "https://www.farmington.k12.mi.us/Page/1896"
+
+      [params.education.items.featuredLink]
+      enable = false
+      url = "https://example.com"
+
+  [params.achievements]
+  enable = false
+
+    [[params.achievements.items]]
+    title = "Google kickstart runner"
+    content = "I solved all problems with optimal solution."
+    url = "https://example.com"
+    image = "/images/achievment.jpg"
+
+    [[params.achievements.items]]
+    title = "Facebook Hackathon Winner"
+    content = "Developed a product using Artificial Intelligence."
+    image = "/images/achievment.jpg"
+
+    [[params.achievements.items]]
+    title = "Hugo Profile"
+    content = "Developed a theme and getting 1K+ downloads per month."
+    url = "https://github.com/gurusabarish/hugo-profile"
+    image = "/images/achievment.jpg"
+
+    [[params.achievements.items]]
+    title = "Microsoft Imagine Runner"
+    content = "We are developed a product which can help others."
+
+    [[params.achievements.items]]
+    title = "Google Summer of Code"
+    content = "Contributed to a open source project."
+    url = "https://example.com"
+
+  [params.projects]
+  enable = false
+
+    [[params.projects.items]]
+    title = "Hugo Profile"
+    content = "A highly customizable and mobile first Hugo template for personal portfolio and blog."
+    image = "/images/projects/profile.png"
+    badges = [ "Hugo", "Bootstrap", "Javascript" ]
+
+      [params.projects.items.featured]
+      name = "Demo"
+      link = "https://hugo-profile.netlify.app"
+
+      [[params.projects.items.links]]
+      icon = "fa fa-envelope"
+      url = "mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f"
+
+      [[params.projects.items.links]]
+      icon = "fab fa-github"
+      url = "https://github.com/gurusabarish/hugo-profile"
+
+      [[params.projects.items.links]]
+      icon = "fab fa-twitter"
+      url = "https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile"
+
+    [[params.projects.items]]
+    title = "Image Converter"
+    content = "A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django."
+    image = "/images/projects/converter.jpg"
+    badges = [ "Django", "Bootstrap" ]
+
+      [params.projects.items.featured]
+      name = "Demo"
+      link = "https://django-converter.herokuapp.com"
+
+      [[params.projects.items.links]]
+      icon = "fab fa-github"
+      url = "https://github.com/gurusabarish/converter"
+
+    [[params.projects.items]]
+    title = "Hugo Profile V2"
+    content = "A clean and simple Hugo template for personal portfolio and blog."
+    image = "/images/projects/profile2.jpg"
+    badges = [ "Hugo", "Bootstrap", "Javascript" ]
+
+      [params.projects.items.featured]
+      name = "Demo V2"
+      link = "https://hugo-profile-2.netlify.app"
+
+      [[params.projects.items.links]]
+      icon = "fab fa-github"
+      url = "https://github.com/gurusabarish/HugoProfileV2"
+
+  [params.contact]
+  enable = true
+  content = "My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!"
+  email = "kyle.turske@protonmail.com"
+  btnName = "Mail me"
+
+[params.footer.recentPosts]
+path = "blogs"
+count = 3
+title = "Recent Posts"
+enable = true
+disableFeaturedImage = false
+
+[params.footer.socialNetworks]
+github = "https://github.com"
+linkedin = "https://linkedin.com"
+instagram = "https://instagram.com"
+
+  [params.listPages]
+  disableFeaturedImage = false
+
+[params.singlePages.readTime]
+enable = true
+content = "min read"
+
+[params.singlePages.scrollprogress]
+enable = true
+
+  [params.terms]
+  read = "Read"
+  toc = "Table Of Contents"
+  copyright = "All rights reserved"
+  pageNotFound = "Page not found"
+  emailText = "Check out this site"
+
+  [params.datesFormat]
+  article = "Jan 2, 2006"
+  articleList = "Jan 2, 2006"
+  articleRecent = "Jan 2, 2006"
